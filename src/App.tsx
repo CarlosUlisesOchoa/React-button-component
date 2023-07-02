@@ -4,7 +4,7 @@ import './styles/App.css'
 function App() {
   return (
     <>
-      <Button>Default</Button>
+      <Button variant='outline'>Default</Button>
     </>
   )
 }

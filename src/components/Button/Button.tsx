@@ -8,8 +8,6 @@ const StyledButton = styled.button<StyledButtonProps>`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  background: #e0e0e0;
-  border: none;
 
   flex-shrink: 0;
   border-radius: 0.375rem;
@@ -19,15 +17,23 @@ const StyledButton = styled.button<StyledButtonProps>`
     css`
       color: #3f3f3f;
       box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
+      background: #e0e0e0;
+      border: none;
       &:hover,
       &:focus {
         background: #aeaeae;
       }
     `}
   ${({ variant }) =>
-    variant === 'outlined' &&
+    variant === 'outline' &&
     css`
-      // outlined styles here
+      color: #3d5afe;
+      border: 1px solid #3d5afe;
+      background: transparent;
+      &:hover,
+      &:focus {
+        background: rgba(41, 98, 255, 0.1);
+      }
     `}
   ${({ variant }) =>
     variant === 'text' &&
@@ -86,7 +92,7 @@ export const Button = ({
   variant = 'default',
   disableShadow = false,
   size = 'md',
-  color = 'default',
+  color = '',
   // startIcon, // TODO: add icon feature
   // endIcon, // TODO: add icon feature
   children,
