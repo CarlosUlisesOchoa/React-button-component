@@ -92,6 +92,22 @@ const StyledButton = styled.button<StyledButtonProps>`
     css`
       // put danger color styles here
     `}
+
+    ${({ disabled }) =>
+    disabled &&
+    css`
+      color: #9e9e9e;
+      background: #e0e0e0;
+      box-shadow: none;
+      cursor: not-allowed;
+      &:hover,
+      &:focus {
+        color: #9e9e9e;
+        background: #e0e0e0;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    `}
 `
 
 export const Button = ({

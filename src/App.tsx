@@ -4,7 +4,7 @@ import './styles/App.css'
 function App() {
   return (
     <>
-      <Button variant='text'>Default</Button>
+      <Button disabled>Default</Button>
     </>
   )
 }
