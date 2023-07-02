@@ -38,7 +38,13 @@ const StyledButton = styled.button<StyledButtonProps>`
   ${({ variant }) =>
     variant === 'text' &&
     css`
-      // text styles here
+      color: #3d5afe;
+      background: transparent;
+      border: none;
+      &:hover,
+      &:focus {
+        background: rgba(41, 98, 255, 0.1);
+      }
     `}
 
   ${({ disableShadow }) =>
