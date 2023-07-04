@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components'
 import { ButtonProps, StyledButtonProps } from './types'
 
 const StyledButton = styled.button<StyledButtonProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
   font-size: 0.875rem;
   font-family: Inter, sans-serif;
@@ -99,6 +103,44 @@ const StyledButton = styled.button<StyledButtonProps>`
       }
     `}
 
+${({ startIcon }) =>
+    startIcon &&
+    css`
+      width: 6.5625rem;
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
+      }
+    `}
+    ${({ endIcon }) =>
+    endIcon &&
+    css`
+      width: 6.5625rem;
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
+      }
+    `}
   ${({ size }) =>
     size === 'sm' &&
     css`
@@ -219,23 +261,40 @@ const StyledButton = styled.button<StyledButtonProps>`
 `
 
 export const Button = ({
-  //   variant = 'default',
-  //   disableShadow = false,
-  //   size = 'md',
-  //   color = 'default',
-  // startIcon, // TODO: add icon feature
-  // endIcon, // TODO: add icon feature
+  variant, // 'default',
+  disableShadow, // false,
+  size, // 'md',
+  color, // 'default',
+  startIcon, // ''
+  endIcon, // ''
   children,
   ...otherProps
 }: ButtonProps) => {
+  const conditionalProps = {
+    ...(variant && { variant }),
+    ...(disableShadow !== undefined && { disableShadow }),
+    ...(size && { size }),
+    ...(color && { color }),
+    ...(startIcon && { startIcon }),
+    ...(endIcon && { endIcon }),
+  }
   return (
-    <StyledButton
-      //   variant={variant}
-      //   disableShadow={disableShadow}
-      //   size={size}
-      //   color={color}
-      {...otherProps}>
+    <StyledButton {...conditionalProps} {...otherProps}>
+      {startIcon && (
+        <span
+          style={{ fontSize: '1rem', marginRight: '0.5rem' }}
+          className='material-symbols-outlined'>
+          {startIcon}
+        </span>
+      )}
       {children}
+      {endIcon && (
+        <span
+          style={{ fontSize: '1rem', marginLeft: '0.5rem' }}
+          className='material-symbols-outlined'>
+          {endIcon}
+        </span>
+      )}
     </StyledButton>
   )
 }
