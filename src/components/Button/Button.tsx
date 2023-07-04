@@ -12,27 +12,50 @@ const StyledButton = styled.button<StyledButtonProps>`
   flex-shrink: 0;
   border-radius: 0.375rem;
 
+  width: 5.0625rem;
+  height: 2.25rem;
+  box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
+  color: #3f3f3f;
+  background: #e0e0e0;
+  border: none;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    background: #aeaeae;
+  }
+  &:disabled,
+  &.disabled {
+    opacity: 0.65;
+    color: #9e9e9e;
+    background: #e0e0e0;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
   ${({ variant }) =>
     variant === 'default' &&
     css`
-      color: #3f3f3f;
-      box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
-      background: #e0e0e0;
-      border: none;
-      &:hover,
-      &:focus {
-        background: #aeaeae;
-      }
+      // default styles are already applied
     `}
   ${({ variant }) =>
     variant === 'outline' &&
     css`
       color: #3d5afe;
       border: 1px solid #3d5afe;
+      box-shadow: none;
       background: transparent;
       &:hover,
-      &:focus {
+      &.hover,
+      &:focus,
+      &.focus {
         background: rgba(41, 98, 255, 0.1);
+      }
+      &:disabled,
+      &.disabled {
+        color: #3d5afe;
+        background: transparent;
       }
     `}
   ${({ variant }) =>
@@ -41,9 +64,18 @@ const StyledButton = styled.button<StyledButtonProps>`
       color: #3d5afe;
       background: transparent;
       border: none;
+      box-shadow: none;
       &:hover,
-      &:focus {
+      &.hover,
+      &:focus,
+      &.focus {
         background: rgba(41, 98, 255, 0.1);
+      }
+      &:disabled,
+      &.disabled {
+        color: #9e9e9e;
+        background: transparent;
+        box-shadow: none;
       }
     `}
 
@@ -51,70 +83,88 @@ const StyledButton = styled.button<StyledButtonProps>`
     disableShadow &&
     css`
       box-shadow: none;
+      color: #ffffff;
+      background: #3d5afe;
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        box-shadow: none;
+        color: #ffffff;
+        background: #3d5afe;
+      }
     `}
 
   ${({ size }) =>
     size === 'sm' &&
     css`
-      // small size styles here
+      width: 4.5625rem;
+      height: 2rem;
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
+      }
     `}
   ${({ size }) =>
     size === 'md' &&
     css`
-      width: 5.0625rem;
-      height: 2.25rem;
+      // width and height are already applied
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
+      }
     `}
   ${({ size }) =>
     size === 'lg' &&
     css`
-      // large size styles here
-    `}
-
-  ${({ color }) =>
-    color === 'default' &&
-    css`
-      color: #3f3f3f;
-      background: #e0e0e0;
-      box-shadow: 0px 2px 3px 0px rgba(51, 51, 51, 0.2);
-    `}
-  ${({ color }) =>
-    color === 'primary' &&
-    css`
-      // put primary color styles here
-    `}
-  ${({ color }) =>
-    color === 'secondary' &&
-    css`
-      // put secondary color styles here
-    `}
-  ${({ color }) =>
-    color === 'danger' &&
-    css`
-      // put danger color styles here
-    `}
-
-    ${({ disabled }) =>
-    disabled &&
-    css`
-      color: #9e9e9e;
-      background: #e0e0e0;
-      box-shadow: none;
-      cursor: not-allowed;
+      width: 5.8125rem;
+      height: 2.625rem;
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
       &:hover,
-      &:focus {
-        color: #9e9e9e;
-        background: #e0e0e0;
-        box-shadow: none;
-        cursor: not-allowed;
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
       }
     `}
 `
 
 export const Button = ({
-  variant = 'default',
-  disableShadow = false,
-  size = 'md',
-  color = '',
+  //   variant = 'default',
+  //   disableShadow = false,
+  //   size = 'md',
+  //   color = 'default',
   // startIcon, // TODO: add icon feature
   // endIcon, // TODO: add icon feature
   children,
@@ -122,10 +172,10 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <StyledButton
-      variant={variant}
-      disableShadow={disableShadow}
-      size={size}
-      color={color}
+      //   variant={variant}
+      //   disableShadow={disableShadow}
+      //   size={size}
+      //   color={color}
       {...otherProps}>
       {children}
     </StyledButton>
