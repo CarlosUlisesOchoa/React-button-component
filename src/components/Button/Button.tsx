@@ -158,6 +158,64 @@ const StyledButton = styled.button<StyledButtonProps>`
         background: #3d5afe;
       }
     `}
+
+  ${({ color }) =>
+    color === 'default' &&
+    css`
+      // default styles are already applied
+    `}
+  ${({ color }) =>
+    color === 'primary' &&
+    css`
+      color: #ffffff;
+      background: #3d5afe;
+      box-shadow: 0px 2px 3px 0px rgba(41, 98, 255, 0.2);
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #0039cb;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #3d5afe;
+      }
+    `}
+  ${({ color }) =>
+    color === 'secondary' &&
+    css`
+      color: #ffffff;
+      background: #455a64;
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #1c313a;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #455a64;
+      }
+    `}
+  ${({ color }) =>
+    color === 'danger' &&
+    css`
+      color: #ffffff;
+      background: #d32f2f;
+      &:hover,
+      &.hover,
+      &:focus,
+      &.focus {
+        background: #9a0007;
+      }
+      &:disabled,
+      &.disabled {
+        color: #ffffff;
+        background: #d32f2f;
+      }
+    `}
 `
 
 export const Button = ({
