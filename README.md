@@ -1,18 +1,18 @@
-<!-- Please update value in the {}  -->
+<h1 align="center">Button component</h1>
 
-<h1 align="center">{Your project name}</h1>
+<br/>
 
 <div align="center">
-   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+   Solution for <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY" target="_blank">this challenge</a> from  <a href="https://devchallenges.io/" target="_blank">Devchallenges.io</a>.
 </div>
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="#!">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/CarlosUlisesOchoa/React-button-component">
       Solution
     </a>
     <span> | </span>
@@ -22,7 +22,7 @@
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
+<br />
 
 ## Table of Contents
 
@@ -33,60 +33,52 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-<!-- OVERVIEW -->
-
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+<!-- Replace the URL with the screenshot of your project -->
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+![screenshot](https://github.com/CarlosUlisesOchoa/React-button-component/assets/26280134/1254f60c-4fb7-4f84-b581-f25a005dc000)
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- Here is the live demo of my project: {your-demo-link}
+- My experience while working on this project was really interesting. I learned some things about Figma, styled components and pure CSS.
+- I improved my skills in designing custom React components and handling dynamic props.
+- My wisdom after finishing this project: Spend a good time planning before jumping into coding.
 
 ### Built With
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Vite](https://vitejs.dev/)
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
+This application was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
 
 ## How To Use
-
-<!-- This is an example, please update according to your application -->
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/CarlosUlisesOchoa/React-button-component
 
 # Install dependencies
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Vite](https://vitejs.dev/)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [carlos8a.com](https://carlos8a.com)
+- GitHub [@CarlosUlisesOchoa](https://github.com/carlosulisesochoa)
+- Twitter [@Carlos8aDev](https://twitter.com/carlos8adev)
