@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="#!">
+    <a href="https://devchallenges-btn-solution.vercel.app">
       Demo
     </a>
     <span> | </span>
@@ -39,9 +39,10 @@ React component developed following a Figma design ✨
 
 <!-- Replace the URL with the screenshot of your project -->
 
-![screenshot](https://github.com/CarlosUlisesOchoa/React-button-component/assets/26280134/1254f60c-4fb7-4f84-b581-f25a005dc000)
+![image](https://github.com/CarlosUlisesOchoa/React-button-component/assets/26280134/59495270-e531-4f67-9742-1399a16d3fc7)
 
-- Here is the live demo of my project: {your-demo-link}
+
+- Here is the [live demo](https://devchallenges-btn-solution.vercel.app)
 - My experience while working on this project was really interesting. I learned some things about Figma, styled components and pure CSS.
 - I improved my skills in designing custom React components and handling dynamic props.
 - My wisdom after finishing this project: Spend a good time planning before jumping into coding.
