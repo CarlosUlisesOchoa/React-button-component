@@ -13,14 +13,14 @@
 
 ## TODO List
 
-- [ ] Create a base button with default styling.
-- [ ] Implement different button types: default, outline, and text.
-- [ ] Add a prop to allow disabling of the button's box-shadow.
-- [ ] Add a prop to allow disabling of the button.
-- [ ] Incorporate icon placement options: add props for setting icons either on the left or right.
-- [ ] Choose and incorporate at least 5 icon variants (using Google Icon or similar).
-- [ ] Implement different button sizes, potentially using props like sm, md, lg.
-- [ ] Implement color customization: create a prop to set the button color.
-- [ ] Implement hover and focus states with visible styling changes.
-- [ ] Ensure that all default button attributes (like onClick, disabled, etc.) are accessible and functional.
-- (Optional) Set up Storybook to showcase the button in different states or create a presentation layout similar to the design provided.
+- [ x ] Create a base button with default styling.
+- [ x ] Implement different button types: default, outline, and text.
+- [ x ] Add a prop to allow disabling of the button's box-shadow.
+- [ x ] Add a prop to allow disabling of the button.
+- [ x ] Incorporate icon placement options: add props for setting icons either on the left or right.
+- [ x ] Choose and incorporate at least 5 icon variants (using Google Icon or similar).
+- [ x ] Implement different button sizes, potentially using props like sm, md, lg.
+- [ x ] Implement color customization: create a prop to set the button color.
+- [ x ] Implement hover and focus states with visible styling changes.
+- [ x ] Ensure that all default button attributes (like onClick, disabled, etc.) are accessible and functional.
+- [ x ] (Optional) Set up Storybook to showcase the button in different states or create a presentation layout similar to the design provided.
