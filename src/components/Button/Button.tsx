@@ -38,13 +38,13 @@ const StyledButton = styled.button<StyledButtonProps>`
     cursor: not-allowed;
   }
 
-  ${({ variant }) =>
-    variant === 'default' &&
+  ${({ $variant }) =>
+    $variant === 'default' &&
     css`
       // default styles are already applied
     `}
-  ${({ variant }) =>
-    variant === 'outline' &&
+  ${({ $variant }) =>
+    $variant === 'outline' &&
     css`
       color: #3d5afe;
       border: 1px solid #3d5afe;
@@ -62,8 +62,8 @@ const StyledButton = styled.button<StyledButtonProps>`
         background: transparent;
       }
     `}
-  ${({ variant }) =>
-    variant === 'text' &&
+  ${({ $variant }) =>
+    $variant === 'text' &&
     css`
       color: #3d5afe;
       background: transparent;
@@ -83,8 +83,8 @@ const StyledButton = styled.button<StyledButtonProps>`
       }
     `}
 
-  ${({ disableShadow }) =>
-    disableShadow &&
+  ${({ $disableShadow }) =>
+    $disableShadow &&
     css`
       box-shadow: none;
       color: #ffffff;
@@ -103,8 +103,8 @@ const StyledButton = styled.button<StyledButtonProps>`
       }
     `}
 
-${({ startIcon }) =>
-    startIcon &&
+${({ $startIcon }) =>
+    $startIcon &&
     css`
       width: 6.5625rem;
       color: #ffffff;
@@ -122,8 +122,8 @@ ${({ startIcon }) =>
         background: #3d5afe;
       }
     `}
-    ${({ endIcon }) =>
-    endIcon &&
+    ${({ $endIcon }) =>
+    $endIcon &&
     css`
       width: 6.5625rem;
       color: #ffffff;
@@ -141,8 +141,8 @@ ${({ startIcon }) =>
         background: #3d5afe;
       }
     `}
-  ${({ size }) =>
-    size === 'sm' &&
+  ${({ $size }) =>
+    $size === 'sm' &&
     css`
       width: 4.5625rem;
       height: 2rem;
@@ -161,8 +161,8 @@ ${({ startIcon }) =>
         background: #3d5afe;
       }
     `}
-  ${({ size }) =>
-    size === 'md' &&
+  ${({ $size }) =>
+    $size === 'md' &&
     css`
       // width and height are already applied
       color: #ffffff;
@@ -180,8 +180,8 @@ ${({ startIcon }) =>
         background: #3d5afe;
       }
     `}
-  ${({ size }) =>
-    size === 'lg' &&
+  ${({ $size }) =>
+    $size === 'lg' &&
     css`
       width: 5.8125rem;
       height: 2.625rem;
@@ -201,13 +201,13 @@ ${({ startIcon }) =>
       }
     `}
 
-  ${({ color }) =>
-    color === 'default' &&
+  ${({ $color }) =>
+    $color === 'default' &&
     css`
       // default styles are already applied
     `}
-  ${({ color }) =>
-    color === 'primary' &&
+  ${({ $color }) =>
+    $color === 'primary' &&
     css`
       color: #ffffff;
       background: #3d5afe;
@@ -224,8 +224,8 @@ ${({ startIcon }) =>
         background: #3d5afe;
       }
     `}
-  ${({ color }) =>
-    color === 'secondary' &&
+  ${({ $color }) =>
+    $color === 'secondary' &&
     css`
       color: #ffffff;
       background: #455a64;
@@ -241,8 +241,8 @@ ${({ startIcon }) =>
         background: #455a64;
       }
     `}
-  ${({ color }) =>
-    color === 'danger' &&
+  ${({ $color }) =>
+    $color === 'danger' &&
     css`
       color: #ffffff;
       background: #d32f2f;
@@ -261,25 +261,24 @@ ${({ startIcon }) =>
 `
 
 export const Button = ({
-  variant, // 'default',
-  disableShadow, // false,
-  size, // 'md',
-  color, // 'default',
-  startIcon, // ''
-  endIcon, // ''
+  variant,
+  disableShadow,
+  size,
+  color,
+  startIcon,
+  endIcon,
   children,
   ...otherProps
 }: ButtonProps) => {
-  const conditionalProps = {
-    ...(variant && { variant }),
-    ...(disableShadow !== undefined && { disableShadow }),
-    ...(size && { size }),
-    ...(color && { color }),
-    ...(startIcon && { startIcon }),
-    ...(endIcon && { endIcon }),
-  }
   return (
-    <StyledButton {...conditionalProps} {...otherProps}>
+    <StyledButton
+      $variant={variant}
+      $disableShadow={disableShadow}
+      $size={size}
+      $color={color}
+      $startIcon={startIcon}
+      $endIcon={endIcon}
+      {...otherProps}>
       {startIcon && (
         <span
           style={{ fontSize: '1rem', marginRight: '0.5rem' }}
