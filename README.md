@@ -24,7 +24,7 @@
 
 <br />
 
-React component developed following a Figma design ✨
+React component developed following a <a href="https://www.figma.com/file/vfMDJhGGnqfaskO2aud06o/button-component">Figma design</a> ✨
 
 ## Table of Contents
 
