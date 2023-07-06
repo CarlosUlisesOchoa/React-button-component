@@ -39,13 +39,13 @@ React component developed following a Figma design ✨
 
 <!-- Replace the URL with the screenshot of your project -->
 
-![image](https://github.com/CarlosUlisesOchoa/React-button-component/assets/26280134/59495270-e531-4f67-9742-1399a16d3fc7)
-
+![image](https://github.com/CarlosUlisesOchoa/React-button-component/assets/26280134/7a10967b-ca26-4782-8983-09035f0f2538)
 
 - Here is the [live demo](https://devchallenges-btn-solution.vercel.app)
 - My experience while working on this project was really interesting. I learned some things about Figma, styled components and pure CSS.
 - I improved my skills in designing custom React components and handling dynamic props.
-- My wisdom after finishing this project: Spend a good time planning before jumping into coding.
+- My wisdom after finishing this project: Spend a good time planning before jumping into coding (
+Don't be despairing).
 
 ### Built With
 
