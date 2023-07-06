@@ -14,6 +14,22 @@ function App() {
   }
   return (
     <>
+      <h1>Custom button component challenge</h1>
+      <p>
+        Developed by{' '}
+        <a rel='noreferrer' target='_blank' href='https://carlos8a.com/'>
+          Carlos Ochoa
+        </a>
+      </p>
+      <p>
+        GitHub repo:{' '}
+        <a
+          rel='noreferrer'
+          target='_blank'
+          href='https://github.com/CarlosUlisesOchoa/React-button-component'>
+          React-button-component
+        </a>
+      </p>
       <div style={gridContainerStyle}>
         {/* two elements */}
         <div style={{ gridColumn: 'span 2' }}>
